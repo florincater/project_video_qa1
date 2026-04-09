@@ -1,6 +1,7 @@
+openai-whisper
+ffmpeg-python
 streamlit
 opencv-python-headless
-faster-whisper
 langchain
 faiss-cpu
 sentence-transformers
