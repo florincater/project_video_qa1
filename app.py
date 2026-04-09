@@ -4,9 +4,9 @@ import tempfile
 from ingestion import VideoIngestion
 from transcription import VideoTranscriber
 from vector_store import VideoVectorStore
-from rag import VideoRAG  # À implémenter
+from rag import VideoRAG
 
-st.title("? Video Q&A System")
+st.title("🎥 Video Q&A System")
 st.markdown("Posez des questions sur le contenu de vos vidéos !")
 
 # Initialisation des composants
@@ -64,6 +64,11 @@ if uploaded_file:
     if question:
         with st.spinner("Recherche de la réponse..."):
             response = rag.answer(question)
+            
+            # 🔽 MODE INDICATOR GOES HERE - Right after getting response 🔽
+            if response.get('restricted_mode', False):
+                st.info("ℹ️ **Mode restreint actif** - Fonctionnalités IA complètes disponibles avec clé API OpenAI")
+            # 🔼 MODE INDICATOR ENDS HERE 🔼
             
             st.markdown("### Réponse")
             st.write(response['answer'])

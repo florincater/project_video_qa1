@@ -1,4 +1,3 @@
-openai
 streamlit
 opencv-python-headless
 faster-whisper
