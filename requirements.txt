@@ -1,0 +1,8 @@
+streamlit
+opencv-python
+whisper
+sentence-transformers
+faiss-cpu
+numpy
+ffmpeg-python
+openai
