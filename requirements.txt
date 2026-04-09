@@ -1,8 +1,8 @@
 streamlit
-opencv-python
-whisper
-sentence-transformers
+opencv-python-headless
+langchain
 faiss-cpu
+sentence-transformers
+youtube-transcript-api
+pytube
 numpy
-ffmpeg-python
-openai
